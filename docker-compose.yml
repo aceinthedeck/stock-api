@@ -1,0 +1,27 @@
+version: "3.9"
+
+services:
+  api:
+    image: 'stocks-api:latest'
+    build:
+      context: .
+    container_name: api
+    ports:
+      - "8080:8080"
+    depends_on:
+      - postgres
+    environment:
+      - DATASOURCE_URL=jdbc:postgresql://postgres:5432/stocks
+      - DATASOURCE_USERNAME=developer
+      - DATASOURCE_PASSWORD=secret
+
+  postgres:
+    image: postgres:14-alpine
+    volumes:
+      - ./database:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+    environment:
+      - POSTGRES_DB=stocks
+      - POSTGRES_USER=developer
+      - POSTGRES_PASSWORD=secret
