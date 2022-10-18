@@ -60,6 +60,7 @@ It will return 200 OK response if successful.
 
 #### 3. Query stock data
 
+Note: The ticker is case-sensitive
 ```
 GET: http://localhost:8080/stocks/AA
 
