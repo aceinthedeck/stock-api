@@ -7,7 +7,6 @@ import org.springframework.cache.annotation.EnableCaching;
 
 @SpringBootApplication
 @ConfigurationPropertiesScan
-@EnableCaching
 public class StocksApplication {
 
 	public static void main(String[] args) {

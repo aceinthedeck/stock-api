@@ -2,7 +2,7 @@
 
 ### Run the application
 
-To run the application using docker use the following command
+To run the application using docker use the following command from the directory root
 
 ```
 docker-compose up
